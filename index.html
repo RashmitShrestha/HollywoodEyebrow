@@ -1,220 +1,411 @@
 
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Carousel Template · Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
 
-<head>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-      
-      <style>
-                
-                body {
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
+<script>
+
+$( document ).ready(function() {
+  new WOW().init();
+});
+
+
+</script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 5px;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <h1 class="navbar-brand">Carousel</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+      </ul>
+     
+    </div>
+  </nav>
+</header>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container ">
+
+    <!-- Three columns of text below the carousel -->
+    <div style="margin-top:105px; " class="row">
+      <div class="col-lg-6">
+        <img style="margin-top:75px;" class="bd-placeholder-img img-fluid rounded-circle"  class="row" width="470" height="570"   preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/images/hol.jpg" aria-label="Placeholder: 140x140">
+      </div><!-- /.col-lg-4 -->
+    <div style="margin-top:55px; font-size:23px; text-align:JUSTIFY;" class="col-lg-6">
+      <p><b>Our Motto:</b> "The world meditates looking at the eye of lord Buddha.
+        Let me design your eyebrows, your beloved will meditate looking at you eyes."
+        </br> </br>
+
+        We are a professional and talented team of beauticians who will listen and
+        adapt to our customer's specific needs, including many services from eyebrow
+        threading to gently applying henna tattoos. While wating, please enjoy our
+        decorations and tranquil atmosphere. We believe that it's cruical to have good
+        eyebrows because, it's used for showing emotions also, your eyebrows will make
+        the first impression while meeting soemone, so it's important to have attractive
+        eyebrows.
+
+        <br /><br /></p>
+
+
+    </div>
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+
+  
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">    <b>Waxing</b></h2>
+  
+          Eyebrow Wax <br /><br /> Lip Wax <br /><br /> Chin Wax <br /><br /> Forehead Wax <br /><br />
+          Cheek Wax <br /><br /> Sideburns Wax <br /><br /> Ear Wax <br /><br /> Full Face Wax(Includes Eyebrow)
+          <br /><br /> Neck Wax <br /><br /> <u><b>Waxing - Body</b></u> <br /><br /> Bikini
+          Wax
+          <br /><br /> Brazilian Wax <br /><br /> Underarm Wax
+          <br /><br /> Back Wax <br /><br /> Shoulder Wax <br /><br /> Chest Wax <br /><br /> Abs/Stomach Wax
+          <br /><br /> <u><b> Waxing - Arms & Legs </b></u><br /><br /> Full Arm Wax
+          <br /><br /> Half Arm Wax <br /><br /> Finger Wax
+      </div>
+      <div class="col-md-6 ">
+        <h2><b>Threading</b></h2>
+
+        Eyebrow Threading
+        <br /><br />
+        Lip Threading
+        <br /><br />
+        Chin Threading
+        <br /><br />
+        Full Face Threading(Includes Eyebrows)
+        <br /><br />
+        Sides Threading
+        <br /><br />
+        Cheeks Threading
+        <br /><br />
+        Forehead Threading
+        <br /><br />
+        Neck Threading
+        <br /><br /><br />
+        <h2><b>Eyelash Extensions</b></h2><br />
+        One by One
+        <br /><br />
+        Cluster
+        <br /><br />
+        Stripe
+        <br /><br /><br />
+
+        <h2><b>Henna</h2></b><br />
+        (Price based on the complexity of the design)
+        <br /><br /><br />
+
+        <h2><b>Facial</b></h2><br />
+        European (1 hour)
+        <br /><br />
+        Cleansing (10 minutes)
+        <br /><br />
+        Cleansing + Light Extraction
+        <br /><br />      </div>
+    </div>
+
+    <hr class="featurette-divider">
+ 
+
+    <div class="container my-5">
+
+
+      <!--Section: Content-->
+      <section class="text-center dark-grey-text">
         
-            margin-left: auto;
-                   margin-right:auto;
-                   font-family: 'Comfortaa', cursive !important;
-                }
-
-                h2 {
-               
-                color:#fff;
-                text-shadow:2px 2px #ff4444;
-
-                }
-
-                .title {
-                top:0px;
-                height:100px;
-                padding:30px;
-                color:#fff;
-                    text-shadow:2px 2px #ff4444;
-                    background-color:#ff99b9 !important;
-                }
-                
-                .nav {
-                background-color:#ff99b9 ;
-                font-size:30px;
-                width:100%;
-               
-               
-                }
-                
-                .nav-link {
-                    color:black ;
-                font-size:20px;
-                width:100%;
-               
-                }
-                
-               .nav-link:hover {
-
-                    color:rgb(252, 74, 130);
-
-                }
-
-            
-                ol {
-             list-style-type: none;
-
-             padding: 0;
-                 overflow: hidden;
-             background-color: #ff6597;
-            }
-
-              li {
-            float: left;
-                }
-
-                li a {
-                display: block;
-                 color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                        }
-
-                li a:hover {
-                background-color: #f73b76;
-                text-decoration: none;
-                color: white;
-                    }
-                
-               
-
-
-                    #foot {
-                        width:100%;
-                        height:50px;
-                     
-                    }
-               
-                    .container {
-                        background-color:#ff99b9 !important;
-                        text-align:justify;
-                        width:100% !important;
-                        display:block !important;
-                        margin-top:60px;
-                        padding:10px;
-                    }
-               
-               
-                    .d-blocky, .carousel-inner ,#carouselExampleSlidesOnly  {
-            
-                        height:550px !important;
-                        width:100% !important;
-                        background-position: top;
-                    }
-               
-               
-                    .jumbotron-fluid {
-                      border:1px solid black;
-                      height:100px;
-                      position:relative;
-                      bottom:0px;
-                    }
-                </style>
+        <style>
+          .carousel-multi-item.v-2 .carousel-inner .carousel-item.active,
+          .carousel-multi-item.v-2 .carousel-item-next,
+          .carousel-multi-item.v-2 .carousel-item-prev {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; }
+          .carousel-multi-item.v-2 .carousel-item-right.active,
+          .carousel-multi-item.v-2 .carousel-item-next {
+            -webkit-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+            transform: translateX(50%); }
+          .carousel-multi-item.v-2 .carousel-item-left.active,
+          .carousel-multi-item.v-2 .carousel-item-prev {
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+          .carousel-multi-item.v-2 .carousel-item-right,
+          .carousel-multi-item.v-2 .carousel-item-left {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0); }
+        </style>
+        
+        <h3 class="font-weight-bold pb-4 mb-0 text-center">Gallery</h3>
     
+        <div class="row">
+          <div class="col-md-12">
     
+            <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollywood Eyebrow Threading</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
+              <!--Controls-->
+              <div class="controls-top">
+                <a class="btn-floating bg-transparent z-depth-0 m-0" href="#carousel-example-multi" data-slide="prev"><i class="dark-grey-text fas fa-chevron-left"></i></a>
+                <a class="btn-floating bg-transparent z-depth-0 m-0" href="#carousel-example-multi" data-slide="next"><i class="dark-grey-text fas fa-chevron-right"></i></a>
+              </div>
+              <!--/.Controls-->
     
-
-    <div id="i-div">
-        <center>
-        <div class="title">
-        <h1>Hollywood Eyebrow Threading</h1>
-        </div>
-        </center>
-      
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="carousel-inner" role="listbox">
     
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="location.html">Location</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                      </li>
-                
-                
-                </ul>
+                <div class="carousel-item active">
+                  <div class="col-12 col-md-6 mb-4 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(150).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
                 </div>
-            
-               </nav>
-       
+                <div class="carousel-item">
+                  <div class="col-12 col-md-6 mb-4 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-12 col-md-6 mb-4 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(138).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-12 col-md-6 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(133).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-12 col-md-6 mb-4 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(148).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-12 col-md-6 mb-4 mx-auto">
+                    <div class="view rounded z-depth-1-half">
+                      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg" class="img-fluid rounded" alt="Sample image">
+                    </div>
+                  </div>
+                </div>
     
-
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img src="https://www.mckinneyonline.com/wp-content/uploads/eyebrow.jpg" class="d-block w-100" alt="...">
+              </div>
+    
+            </div>
+    
           </div>
         </div>
-      </div>
-
-
-
-    <div class="container">
     
-    <h2>Welecome to the Website!</h2>
-   
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Metus vulputate eu scelerisque felis imperdiet proin. Ut consequat
-    semper viverra nam. Id faucibus nisl tincidunt eget.
-    <br />
-    <br />
-     Mauris sit amet 
-    massa vitae tortor condimentum lacinia quis. Porta lorem mollis 
-    aliquam ut porttitor leo a diam sollicitudin. Consectetur purus ut 
-    faucibus pulvinar elementum integer enim neque. Faucibus turpis in 
-    eu mi bibendum neque egestas congue. Purus faucibus ornare suspendisse 
-    sed nisi lacus.
-    <br />
-    <br />
-     Lectus nulla at volutpat diam. Non enim praesent elementum 
-    facilisis leo. Morbi quis commodo odio aenean sed adipiscing diam donec. At 
-    ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Erat imperdiet sed 
-    euismod nisi porta lorem mollis aliquam ut. Risus in hendrerit gravida rutrum quisque 
-    non tellus. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt.
-    Vulputate odio ut enim blandit volutpat.
-
-</p>
-
+      </section>
+      <!--Section: Content-->
+    
+    
     </div>
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
 
 
-   
-<footer id="foot">
-      <div class="jumbotron jumbotron-fluid">
-      <div class="container1">
-       <h6>@Hollywood Eyebrow Threading</h6>
-      </div>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    
+    <div class="container-fluid mt-3 mb-5">
+
+      <!-- Section: Block Content -->
+      <section class="mb-4">
+    
+        <style>
+          .map-container {
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+          }
+    
+          
+          .card {
+            
+            height:200px;
+            
+          }
+          .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            position: absolute;
+          }
+        </style>
+    
+        <div class="card">
+    
+          <div class="row">
+            <div class="col-md-6">
+    
+              <!-- Google Maps -->
+              <div id="map-within-card-2" class="map-container rounded-left" style="height: 400px">
+                <iframe src="https://maps.google.com/maps?q=Seattle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div>
+              <!-- Google Maps -->
+    
+            </div>
+    
+            <div class="col-10 col-md-4 mx-auto align-self-center py-4">
+    
+              <h6 class="font-weight-bold grey-text text-uppercase small">Head Office</h6>
+              <h5 class="font-weight-normal mb-4">Seattle, WA</h5>
+              <p class="text-muted font-weight-light">2651 Main Street, Suit 124<br>Seattle, WA, 98101</p>
+              <p class="text-muted font-weight-light mb-0">Phone: +1 987 123 6548<br>Email: hello@thetheme.io</p>
+    
+            </div>
+          </div>
+    
+        </div>
+    
+      </section>
+      <!-- Section: Block Content -->
+    
     </div>
+    
+    
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
 
 
 
-    </body>
-</html>
+  <!-- End your project here-->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+
+
+
+
+
+
+
+
+      </html>
